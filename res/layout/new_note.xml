@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/newNote" 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent"
+        android:text="@string/new_note" />
+    
+    <TextView 
+        android:id="@+id/lbSubject" 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent"
+        android:text="@string/subject" />
+
+    <EditText 
+        android:id="@+id/txtSubject" 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" />
+
+	<TextView 
+        android:id="@+id/lbNote" 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent"
+        android:text="@string/note" />
+
+    <EditText 
+        android:id="@+id/txtNote" 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent"
+        android:lines="7" />
+    <RelativeLayout 
+        android:layout_height="100dp"
+        android:layout_width="fill_parent"
+        android:paddingTop="25dp"
+        >
+        <Button 
+            android:id="@+id/submit" 
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:text="@string/submit"
+            android:layout_marginRight="25dp"/>
+        <Button 
+            android:id="@+id/cancel" 
+            android:layout_toRightOf="@+id/submit" 
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_width="100dp"             
+            />
+    </RelativeLayout>
+</LinearLayout>
