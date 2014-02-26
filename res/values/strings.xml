@@ -10,4 +10,6 @@
     <string name="note">Note</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
+	<string name="delete_note">Delete</string>
+    <string name="edit_note">Edit</string>
 </resources>

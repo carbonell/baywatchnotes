@@ -1,11 +1,11 @@
 package com.example.entities;
 
 public class Note {
-	private int noteID;
+	private int _noteID;
 	private String _subject;
 	private String _note;
 	public int getNoteID() {
-		return noteID;
+		return _noteID;
 	}
 	
 	public Note(){}
@@ -13,8 +13,15 @@ public class Note {
 		_subject = subject;
 		_note = note;
 	}
+	
+	public Note(int noteID, String subject, String note){
+		_noteID = noteID;
+		_subject = subject;
+		_note = note;
+	}
+	
 	public void setNoteID(int noteID) {
-		this.noteID = noteID;
+		this._noteID = noteID;
 	}
 	public String getSubject() {
 		return _subject;
