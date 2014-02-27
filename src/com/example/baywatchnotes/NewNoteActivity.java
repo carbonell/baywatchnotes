@@ -22,12 +22,7 @@ public class NewNoteActivity extends Activity {
 		getReferences();
 		setEvents();
 		Intent i = getIntent();
-		int idToLog = i.getIntExtra("noteID", 0); 
-		
-		Log.w("App", Integer.valueOf(idToLog).toString());
-		Log.w("App", i.getStringExtra("subject"));
-		Log.w("App", i.getStringExtra("note"));
-		
+		String id = Integer.toString(i.getIntExtra("noteID", 0));
 		if(i.getIntExtra("noteID", 0) != 0)
 			setNoteInView(i);
 	}
@@ -36,15 +31,6 @@ public class NewNoteActivity extends Activity {
 		txtSubject.setText(i.getStringExtra("subject"));
 		txtNote.setText(i.getStringExtra("note"));
 		noteID = i.getIntExtra("noteID", 0);
-//		if(txtSubject == null)
-//		{
-//			Log.w(";)", ";)");
-//		}
-//		
-//		if(txtNote == null)
-//		{
-//			Log.w(";)", ";)");
-//		}
 	}
 	private void getReferences(){
 		txtSubject = (TextView) findViewById(R.id.txtSubject);
