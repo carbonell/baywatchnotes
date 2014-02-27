@@ -103,9 +103,9 @@ public class MainActivity extends ListActivity {
 		  
 		  if(requestCode == EDIT_NOTE_CODE){
 			  if(resultCode == RESULT_OK){
-			    	Note note = getNoteFromIntent(data);
-			    	replaceNote(note);
-					_adapter.notifyDataSetChanged();
+		    	Note note = getNoteFromIntent(data);
+		    	replaceNote(note);
+				_adapter.notifyDataSetChanged();
 			  }
 		  }
 	}
