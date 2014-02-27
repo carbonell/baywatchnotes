@@ -22,7 +22,6 @@ public class NewNoteActivity extends Activity {
 		getReferences();
 		setEvents();
 		Intent i = getIntent();
-		String id = Integer.toString(i.getIntExtra("noteID", 0));
 		if(i.getIntExtra("noteID", 0) != 0)
 			setNoteInView(i);
 	}
@@ -54,7 +53,7 @@ public class NewNoteActivity extends Activity {
 				returnIntent.putExtra("subject", note.getSubject());
 				returnIntent.putExtra("note", note.getNote());
 				if(noteID != 0)
-				returnIntent.putExtra("noteID", noteID);
+					returnIntent.putExtra("noteID", noteID);
 				setResult(RESULT_OK,returnIntent);     
 				finish();
 			}

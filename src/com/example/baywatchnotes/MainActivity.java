@@ -92,9 +92,12 @@ public class MainActivity extends ListActivity {
 
 		  if (requestCode == NEW_NOTE_CODE) {
 
-		     if(resultCode == RESULT_OK){      
+		     if(resultCode == RESULT_OK){    
+		    	 
 		    	 Note note = getNoteFromIntent(data);
-		         _notes.add(note);
+		         Log.w("App ", "new note: " + note.getSubject());
+		    	 _notes.add(note);
+				 _adapter.notifyDataSetChanged();
 		     }
 		  }
 		  
@@ -102,6 +105,7 @@ public class MainActivity extends ListActivity {
 			  if(resultCode == RESULT_OK){
 			    	Note note = getNoteFromIntent(data);
 			    	replaceNote(note);
+					_adapter.notifyDataSetChanged();
 			  }
 		  }
 	}
