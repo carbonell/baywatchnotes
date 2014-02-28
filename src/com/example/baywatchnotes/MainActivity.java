@@ -1,6 +1,7 @@
 package com.example.baywatchnotes;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import android.app.ListActivity;
@@ -171,6 +172,13 @@ public class MainActivity extends ListActivity {
 			i.putExtra("subject", note.getSubject());
 			i.putExtra("note", note.getNote());
 			startActivityForResult(i, EDIT_NOTE_CODE);
+		}
+		
+		public void onSaveInstanceState(Bundle savedInstanceState){
+			super.onSaveInstanceState(savedInstanceState);
+			HashMap map = new HashMap();
+			map.put("noteList", _notes);
+//			savedInstanceState.put;
 		}
 }
 

@@ -65,7 +65,7 @@ public class NoteAdapter extends ArrayAdapter<Note> {
 		return v;
 	}
 
-	public String getNoteForDisplay(CharSequence note){
+	private String getNoteForDisplay(CharSequence note){
 		if(note.length() > 8){
 			String fragment = note.subSequence(0,7).toString() + "...";
 			return fragment;
@@ -75,9 +75,8 @@ public class NoteAdapter extends ArrayAdapter<Note> {
 	
 	// holder pattern: la forma mas rapida de bregar listviews de acuerdo con google. 
 	// when I say google I mean the company, not the search engine ;)
-	public static class NoteHolder{
+	private static class NoteHolder{
 		public TextView Subject;
 		public TextView Note;
-		
 	}
 }
